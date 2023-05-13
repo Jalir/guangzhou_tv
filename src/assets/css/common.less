@@ -1,0 +1,122 @@
+// 下面是解决ios上去除微信点击蓝色边框
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//a:focus,
+//input:focus,
+//p:focus,
+//div:focus {
+//  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//  -webkit-user-modify: read-write-plaintext-only;
+//}
+
+// light
+@nav-background-color-light: rgba(255, 255, 255, 0.4);
+@background-color-light: rgb(255, 255, 255);
+@color-light: rgb(0, 0, 0);
+@box-shadow-light: rgba(255, 255, 255, 0.5);
+@nav-box-shadow-color-light: rgba(220, 216, 216, .5);
+@border-color-light: rgba(0, 0, 0, .3);
+
+//dark
+@nav-background-color-dark: rgba(24, 24, 24, 0.4);
+@background-color-dark: rgba(54, 54, 54, 1);
+@color-dark: rgb(255, 255, 255);
+@box-shadow-dark: rgba(246, 240, 240, 0.5);
+@nav-box-shadow-color-dark: rgba(0, 0, 0, 0);
+@border-color-dark: rgba(90, 67, 67, 0.8);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// default
+#app {
+  --nav-background-color: rgba(35, 53, 78, 1);
+  --backgounrd-color: rgba(37, 47, 62, 1);
+  --color: rgba(255, 255, 255, .7);
+  --hover-background-color: rgba(255, 255, 255, 0.05);
+  --active-background-color: rgba(255, 255, 255, 0.1);
+  --light-color: rgb(255, 255, 255);
+  --clock-background-color: rgba(70, 78, 91, 1);
+  --dark-sideBar-background-color: rgba(27, 42, 63, 1);
+  --light-sideBar-background-color: rgba(53, 73, 104, 1);
+  --title-background-color: rgb(25, 33, 45);
+  --nav-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  --content-color: rgba(70, 78, 91);
+  --column-nav-background-color: rgba(70, 78, 91, 1);
+  --column-nav-background-color-hover: rgba(70, 78, 91, 1);
+  --hot-search-background-color: rgba(68, 66, 66, 1);
+  //--box-shadow-color: @box-shadow-default;
+  //--nav-box-shadow-color: @nav-box-shadow-color-default;
+  //--border-color: @border-color-default;
+}
+
+#app.dark {
+  --nav-background-color: @nav-background-color-dark;
+  --backgounrd-color: @background-color-dark;
+  --color: @color-dark;
+  --box-shadow-color: @box-shadow-dark;
+  --nav-box-shadow-color: @nav-box-shadow-color-dark;
+  --border-color: @border-color-dark;
+}
+
+#app.light {
+  --nav-background-color: @nav-background-color-light;
+  --backgounrd-color: @background-color-light;
+  --color: @color-light;
+  --box-shadow-color: @box-shadow-light;
+  --nav-box-shadow-color: @nav-box-shadow-color-light;
+  --border-color: @border-color-light;
+}
+
+body {
+  font: 16px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgb(120, 121, 127);
+  background: #535353;
+}
+
+@keyframes initShow {
+  0% {
+    opacity: 0.2;
+    transform: translateY(34%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-0.6%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes initShowVideo {
+  0% {
+    opacity: 0.2;
+    transform: translateY(4%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-0.2%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
